@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+
+    <h1 class=" container p-3 mb-2 bg-success text-light w-50" >User {{user.name}} {{user.lastName}}  
+    </h1>
+
+    <form action="/users/{{user.id}}/update" method="post">
+        <label for="name" class="bg-dark text-light">First Name:</label>
+        <input type="text" name="name" value={{user.name}} class="form-control">
+        <label for="lastName" class="bg-dark text-light">Last Name:</label>
+        <input type="text" name="lastName"  value={{user.lastName}} class="form-control">
+        <label for="email" class="bg-dark text-light">Email:</label>
+        <input type="email" name="email"  value={{user.email}} class="form-control"><br>
+        <input type="submit" value="Update" class="btn btn-outline-info">
+        <a href="/home" class="text-decoration-none">Home</a>
+</form>
+</div>
+</body>
+</html>
